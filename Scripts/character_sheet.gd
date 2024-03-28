@@ -6,7 +6,6 @@ class_name CharacterSheet extends Control
 @onready var race_label : Label = %RaceLabel
 
 
-
 func set_character_name(character_name : String) -> void:
 	character_name_label.text = character_name
 	
