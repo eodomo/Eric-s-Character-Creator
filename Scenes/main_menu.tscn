@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cbvw61khca1xu"]
+[gd_scene load_steps=2 format=3 uid="uid://cbvw61khca1xu"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_be0jy"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,34 +9,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_be0jy")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 300
-theme_override_constants/margin_right = 300
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Eric's Character Creator"
 horizontal_alignment = 1
 
-[node name="Load Character" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Load Character" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Load Character"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="New Character Button" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "New Character"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit Button" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="button_up" from="AspectRatioContainer/CenterContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_button_up"]
