@@ -1,4 +1,4 @@
-class_name Item extends Node
+class_name Item extends Resource
 
 var weight: int
 var estimated_value: int

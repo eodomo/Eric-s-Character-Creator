@@ -1,1 +1,3 @@
-class_name Race extends Node2D
+class_name Race extends Resource
+
+var name: String

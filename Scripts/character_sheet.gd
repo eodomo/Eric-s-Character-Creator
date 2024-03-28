@@ -5,6 +5,12 @@ class_name CharacterSheet extends Control
 @onready var experience_label : Label = %ExperienceLabel
 @onready var race_label : Label = %RaceLabel
 
+## TODO: Write this function
+func get_character_data() -> Dictionary :
+	var data: Dictionary = {}
+
+	return data
+
 func set_character_name(character_name : String) -> void:
 	character_name_label.text = character_name
 	

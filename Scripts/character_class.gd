@@ -1,4 +1,4 @@
-class_name CharacterClass extends Node2D
+class_name CharacterClass extends Resource
 
 var level : int
 var experience_points : int

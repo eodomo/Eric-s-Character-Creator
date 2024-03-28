@@ -1,4 +1,4 @@
-class_name Character extends Node2D
+class_name Character extends Resource
 
 signal class_changed
 signal race_changed
