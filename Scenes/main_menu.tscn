@@ -19,28 +19,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="AspectRatioContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer"]
+[node name="LoadCharacter ScrollContainer" type="ScrollContainer" parent="AspectRatioContainer/CenterContainer2"]
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer2/LoadCharacter ScrollContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer/CenterContainer2/LoadCharacter ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Character 1"
+
+[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
+visible = false
+layout_mode = 2
+
+[node name="PopupPanel" type="PopupPanel" parent="AspectRatioContainer/CenterContainer"]
+size = Vector2i(191, 136)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer/PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 187.0
+offset_bottom = 132.0
 alignment = 1
 
-[node name="Title" type="Label" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="AspectRatioContainer/CenterContainer/PopupPanel/VBoxContainer"]
 layout_mode = 2
 text = "Eric's Character Creator"
 horizontal_alignment = 1
 
-[node name="Load Character" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+[node name="Load Character" type="Button" parent="AspectRatioContainer/CenterContainer/PopupPanel/VBoxContainer"]
 layout_mode = 2
 text = "Load Character"
 
-[node name="New Character Button" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+[node name="New Character Button" type="Button" parent="AspectRatioContainer/CenterContainer/PopupPanel/VBoxContainer"]
 layout_mode = 2
 text = "New Character"
 
-[node name="Quit Button" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+[node name="Quit Button" type="Button" parent="AspectRatioContainer/CenterContainer/PopupPanel/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
-[connection signal="button_up" from="AspectRatioContainer/CenterContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_button_up"]
+[connection signal="button_up" from="AspectRatioContainer/CenterContainer/PopupPanel/VBoxContainer/Quit Button" to="." method="_on_quit_button_button_up"]
