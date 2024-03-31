@@ -36,3 +36,7 @@ func _ready() -> void:
 			var button: Button = Button.new()
 			button.text = character
 			load_panel.get_node("LoadCharacterScrollContainer/VBoxContainer").add_child(button)
+
+func _on_new_character_button_pressed() -> void:
+	var new_character_scene: PackedScene = load("res://Scenes/new_character.tscn")
+	get_tree().change_scene_to_packed(new_character_scene)

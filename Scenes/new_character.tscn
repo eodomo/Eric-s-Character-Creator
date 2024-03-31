@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://breydukkc2w5q"]
+
+[ext_resource type="Script" path="res://Scripts/new_character.gd" id="1_8cbu6"]
+
+[node name="NewCharacter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8cbu6")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 116.0
+grow_horizontal = 2
+
+[node name="Race" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Race"]
+layout_mode = 2
+text = "howdy"
+
+[node name="Label2" type="Label" parent="TabContainer/Race"]
+layout_mode = 2
+text = "blah"
+
+[node name="AddRaceButton" type="Button" parent="TabContainer/Race"]
+layout_mode = 2
+text = "+ Add"
+
+[node name="Class" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Class"]
+layout_mode = 2
+text = "darn
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.5
+offset_top = -31.0
+offset_right = 46.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="SaveButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Save"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

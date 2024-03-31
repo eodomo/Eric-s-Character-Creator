@@ -66,4 +66,5 @@ layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/LoadCharacterButton" to="." method="_on_load_character_button_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/NewCharacterButton" to="." method="_on_new_character_button_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
