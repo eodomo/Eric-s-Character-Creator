@@ -23,8 +23,10 @@ alignment = 1
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+current_tab = 2
 
 [node name="Race" type="HBoxContainer" parent="VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -70,6 +72,89 @@ layout_mode = 2
 layout_mode = 2
 text = "darn
 "
+
+[node name="Abilities" type="CenterContainer" parent="VBoxContainer/TabContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/TabContainer/Abilities"]
+layout_mode = 2
+columns = 3
+
+[node name="STRVBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Abilities/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/STRVBoxContainer"]
+layout_mode = 2
+text = "Strength
+"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/TabContainer/Abilities/GridContainer/STRVBoxContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 9.0
+alignment = 1
+
+[node name="ModifierLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/STRVBoxContainer"]
+layout_mode = 2
+text = "Modifier: "
+
+[node name="RacialLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/STRVBoxContainer"]
+layout_mode = 2
+text = "Racial Bonus: "
+
+[node name="AbilityImprovementsLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/STRVBoxContainer"]
+layout_mode = 2
+text = "Ability Improvements: "
+
+[node name="DEXVBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Abilities/GridContainer"]
+layout_mode = 2
+
+[node name="DEXLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/DEXVBoxContainer"]
+layout_mode = 2
+text = "Dexterity
+"
+
+[node name="DEXSpinBox" type="SpinBox" parent="VBoxContainer/TabContainer/Abilities/GridContainer/DEXVBoxContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 9.0
+alignment = 1
+
+[node name="CONVBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Abilities/GridContainer"]
+layout_mode = 2
+
+[node name="CONLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/CONVBoxContainer"]
+layout_mode = 2
+text = "Constitution
+"
+
+[node name="CONSpinBox" type="SpinBox" parent="VBoxContainer/TabContainer/Abilities/GridContainer/CONVBoxContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 9.0
+alignment = 1
+
+[node name="WISVBoxContainer" type="VBoxContainer" parent="VBoxContainer/TabContainer/Abilities/GridContainer"]
+layout_mode = 2
+
+[node name="WISLabel" type="Label" parent="VBoxContainer/TabContainer/Abilities/GridContainer/WISVBoxContainer"]
+layout_mode = 2
+text = "Constitution
+"
+
+[node name="WISSpinBox" type="SpinBox" parent="VBoxContainer/TabContainer/Abilities/GridContainer/WISVBoxContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 9.0
+alignment = 1
+
+[node name="Description" type="ScrollContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Equipment" type="ScrollContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2

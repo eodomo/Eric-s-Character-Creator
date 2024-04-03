@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Stats="*res://Scripts/_stats.gd"
-Skills="*res://Scripts/_skills.gd"
 
 [debug]
 

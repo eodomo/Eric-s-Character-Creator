@@ -1,5 +1,9 @@
 extends Control
 
+var character: Character
+
+func _ready() -> void:
+    character = Character.new()
 
 func _on_back_button_pressed() -> void:
     var main_menu_scene: PackedScene = load("res://Scenes/main_menu.tscn")
